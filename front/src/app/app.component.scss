@@ -1,0 +1,2074 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: roboto-example;
+    font-weight: 400;
+    font-style: normal;
+    src: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoRegular/RobotoRegular.eot);
+    src: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoRegular/RobotoRegular.eot?#iefix) format("embedded-opentype"), url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoRegular/RobotoRegular.woff) format("woff"), url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoRegular/RobotoRegular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: roboto-example;
+    font-weight: 700;
+    font-style: normal;
+    src: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoBold/RobotoBold.eot);
+    src: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoBold/RobotoBold.eot?#iefix) format("embedded-opentype"), url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoBold/RobotoBold.woff) format("woff"), url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/fonts/RobotoBold/RobotoBold.ttf) format("truetype")
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+header {
+    height:60px;
+}
+
+.navbar-brand {
+    float: left;
+    height: auto !important;
+}
+.navbar {
+
+     margin-bottom: 0px !important;
+    }
+
+header .navbar .navbar-nav a.nav-link .icon {
+        height: 20px;
+    width: auto;
+}
+
+
+svg {
+	background: transparent !important;
+}
+
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent
+}
+
+@-ms-viewport {
+    width: device-width
+}
+
+
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important
+}
+
+
+.position-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030
+}
+
+@supports ((position:-webkit-sticky) or (position:sticky)) {
+    .sticky-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    -webkit-clip-path: none;
+    clip-path: none
+}
+
+
+
+.text-justify {
+    text-align: justify !important
+}
+
+.text-nowrap {
+    white-space: nowrap !important
+}
+
+.text-truncate {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.text-left {
+    text-align: left !important
+}
+
+.text-right {
+    text-align: right !important
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.visible {
+    visibility: visible !important
+}
+
+.invisible {
+    visibility: hidden !important
+}
+
+
+
+.input-append.date .add-on,
+.input-prepend.date .add-on {
+    cursor: pointer
+}
+
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+    margin-top: 3px
+}
+
+.input-daterange input {
+    text-align: center
+}
+
+.input-daterange input:first-child {
+    border-radius: 3px 0 0 3px
+}
+
+.input-daterange input:last-child {
+    border-radius: 0 3px 3px 0
+}
+
+.input-daterange .add-on {
+    display: inline-block;
+    width: auto;
+    min-width: 16px;
+    height: 18px;
+    padding: 4px 5px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    vertical-align: middle;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin-left: -5px;
+    margin-right: -5px
+}
+
+html {
+    background: #0e1430
+}
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: Montserrat, sans-serif;
+    overflow-x: hidden;
+    color: #333
+}
+
+body input,
+body textarea {
+    border: #666 1px solid;
+    outline: 0
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+    border-color: red
+}
+
+body input:required:valid,
+body textarea:required:valid {
+    border-color: green
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background: #0a0f2b;
+    border: 1px solid #fff
+}
+
+
+.text-center {
+    text-align: center
+}
+
+b,
+strong {
+    font-weight: 700
+}
+
+.radio {
+    vertical-align: top;
+    width: 17px;
+    height: 17px;
+    margin: 0 3px 0 0
+}
+
+.radio+label {
+    cursor: pointer
+}
+
+.radio:not(checked) {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px
+}
+
+.radio:not(checked)+label {
+    position: relative;
+    padding: 0 0 0 22px
+}
+
+.radio:not(checked)+label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #95959a;
+    border-radius: 50%;
+    background: #fff
+}
+
+.radio:not(checked)+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    background: #328208;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s
+}
+
+.radio:checked+label:after {
+    opacity: 1
+}
+
+.checkbox {
+    vertical-align: top;
+    width: 21px;
+    height: 21px;
+    margin: 0 3px 0 0
+}
+
+.checkbox+label {
+    cursor: pointer
+}
+
+.checkbox:not(checked) {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 7px
+}
+
+.checkbox:not(checked)+label {
+    position: relative;
+    padding: 0 0 0 28px
+}
+
+.checkbox:not(checked)+label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background: #fff
+}
+
+.checkbox:not(checked)+label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 15px;
+    height: 12px;
+    background: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/images/img/checked.png) no-repeat center center;
+    opacity: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s
+}
+
+.checkbox:checked+label {
+    font-weight: 700
+}
+
+.checkbox:checked+label:after {
+    opacity: 1
+}
+
+.onoffswitch {
+    position: relative;
+    width: 50px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border-radius: 12px;
+    padding: 4px;
+    display: inline-block
+}
+
+.onoffswitch-checkbox {
+    display: none
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: none !important;
+    border-radius: 12px;
+    padding: 0 !important;
+    margin: 0 !important
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin .3s ease-in 0s;
+    -o-transition: margin .3s ease-in 0s;
+    transition: margin .3s ease-in 0s
+}
+
+.onoffswitch-inner:after,
+.onoffswitch-inner:before {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 25px;
+    padding: 0;
+    line-height: 25px;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    border-radius: 12px
+}
+
+.onoffswitch-inner:before {
+    content: '';
+    padding-left: 28px;
+    background-color: #04be5b;
+    color: #fff
+}
+
+.onoffswitch-inner:after {
+    content: '';
+    padding-right: 28px;
+    background: #aaa;
+    text-align: right;
+    color: #d0d0d0
+}
+
+.onoffswitch-switch {
+    display: block;
+    width: 21px;
+    height: 21px;
+    margin: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 17px;
+    border-radius: 34px;
+    -webkit-transition: all .3s ease-in 0s;
+    -o-transition: all .3s ease-in 0s;
+    transition: all .3s ease-in 0s;
+    background: #fff
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0
+}
+
+header {
+    background: #181e3d;
+    padding: 6px 0
+}
+
+header .navbar {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+header .navbar .navbar-nav {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+header .navbar .navbar-nav a.nav-link {
+    font-size: 13px;
+    color: #e1e1e1;
+    line-height: 1.375;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+header .navbar .navbar-nav a.nav-link .icon {
+    margin-right: 10px
+}
+
+header .navbar .navbar-nav a.nav-link.balance {
+    font-size: 20px;
+    color: #2bab40;
+    font-weight: 700;
+    line-height: 1.039
+}
+
+header .navbar .navbar-nav a.nav-link.deposit {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.227;
+    background: #2bab40;
+    padding-top: 9px;
+    padding-bottom: 9px
+}
+
+header .navbar .navbar-nav a.nav-link.login {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.227;
+    background: #2bab40;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-left: 10px;
+    text-transform: initial
+}
+
+.content {
+
+    background: #1e2749;
+
+}
+
+.content .left {
+    width: 20%;
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.content .left img {
+    width: auto
+}
+
+.content .top {
+    background: #161c31
+}
+
+.content .right {
+
+    width: 100%;
+    overflow: hidden
+}
+
+.content .graph {
+    //background: #161c31;
+    -webkit-box-shadow: 0 0 12px 1px rgba(0, 0, 0, .56);
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, .56);
+    position: relative
+}
+
+/*.content .graph .top {
+    display: block;
+    padding-left: 100px
+}*/
+
+.content .graph .top nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.content .graph .top nav a {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.content .graph .top nav a:active,
+.content .graph .top nav a:focus,
+.content .graph .top nav a:hover {
+    text-decoration: none;
+    background-color: #4d5d91
+}
+
+.content .graph .top nav a.active {
+    background-color: #4d5d91
+}
+
+.content .graph .block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.content .graph .left-inner {
+    width: -webkit-calc(100% - 230px);
+    width: calc(100% - 230px)
+}
+
+.content .graph .left-inner img {
+    height: 100%
+}
+
+.content .graph .right-inner {
+
+    padding: 0px;
+}
+
+.content .graph .right-inner img {
+    height: auto;
+}
+
+
+
+
+.amount {
+    //background-color: #1f2749;
+    //display: block;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.amount span.title {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.688;
+    display: block;
+    text-align: left;
+        padding-left: 9px;
+}
+
+.amount span.value {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.688;
+    background-color: #4d5d91;
+    text-align: center;
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px
+}
+
+.content .graph .totals {
+    background-color: #1f2749;
+    display: block;
+    padding: 6px;
+    text-align: center;
+    margin-bottom: 26px
+}
+
+.content .graph .totals span {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.3;
+    display: block;
+    text-align: center
+}
+
+.content .graph .totals span b {
+    color: #db4931
+}
+
+.content .graph .switch {
+    display: block;
+    text-align: center;
+    margin-bottom: 14px
+}
+
+.content .graph .switch span.title {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.688
+}
+
+.content .graph .switch span.info {
+    font-size: 13px;
+    margin-left: 6px
+}
+
+.content .graph .bets button {
+    //background-color: #2bab40;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    //width: 100%;
+    display: block;
+    border: none;
+    margin-bottom: 8px;
+    cursor: pointer;
+    float: right;
+    padding-top: 12px;
+    padding-bottom: 14px
+}
+
+
+
+.content .graph .bets button img {
+    display: block;
+    margin: 2px auto;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.content .graph .bets button.down {
+    background: #db4931
+}
+
+.content .table-bets {
+    background: #181e3d;
+    padding: 32px ;
+    text-align: center
+}
+
+.content .table-bets nav {
+    display: inline-block;
+    margin-bottom: 30px;
+    background: #1f2749
+}
+
+.content .table-bets nav a {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    padding: 12px 40px;
+    display: inline-block
+}
+
+.content .table-bets nav a.active {
+    background: #4d5d91
+}
+
+.content .table-bets nav a:active,
+.content .table-bets nav a:focus,
+.content .table-bets nav a:hover {
+    text-decoration: none
+}
+
+.content .table-bets table {
+    width: 100%
+}
+
+.content .table-bets table thead th:not(:first-child) {
+ border-left: 1px solid #C7C8D7;
+  padding-left: 18px;
+}
+
+.content .table-bets table thead th {
+    text-align: left;
+    padding-bottom: 14px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    color: white;
+
+    font-size: 16px;
+
+    line-height: 19px;
+    align-items: center;
+    text-transform: uppercase;
+}
+.content .table-bets table tbody td:not(:first-child) {
+border-left: 1px solid #C7C8D7;
+  padding-left: 18px;
+
+}
+.content .table-bets table tbody td {
+    text-align: left;
+    padding-bottom: 10px;
+    font-family: Open Sans;
+
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    color: #C7C8D7;
+}
+
+.content footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    background: #0e1430
+}
+
+.content footer nav a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.688;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.content footer a.logo {
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.content footer span.copy {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.688;
+    text-align: center;
+    margin-left: 15px
+}
+
+.modal-open .modal {
+    background: rgba(24, 30, 61, .8)
+}
+
+.modal.deposit .modal-dialog {
+    max-width: 630px
+}
+
+.modal.rules .modal-dialog {
+    max-width: 800px
+}
+
+.modal.history .modal-dialog {
+    max-width: 730px
+}
+
+.modal .modal-content {
+    border-radius: 0;
+    border: none;
+    background-color: #1e2749
+}
+
+.modal .modal-content .modal-body {
+    padding: 0
+}
+
+.modal .modal-content .modal-body .history {
+    padding: 15px;
+    text-align: center
+}
+
+.modal .modal-content .modal-body .history button.close {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    text-shadow: none;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    padding: 5px;
+    opacity: 1
+}
+
+.modal .modal-content .modal-body .history span.title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    background: #4d5d91;
+    display: block;
+    padding: 20px 5px;
+    margin-bottom: 15px;
+    //margin: -15px -15px 15px
+}
+
+.modal .modal-content .modal-body .history .date-range {
+    text-align: center;
+    margin-bottom: 8px
+}
+
+.modal .modal-content .modal-body .history .date-range span {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.286;
+    text-align: left;
+    display: inline-block
+}
+
+.modal .modal-content .modal-body .history .date-range span a {
+    color: #1d8aff
+}
+
+.modal .modal-content .modal-body .history span.show {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.571;
+    text-align: left
+}
+
+.modal .modal-content .modal-body .history span.show .form-control {
+    display: inline-block;
+    height: 18px;
+    border-radius: 5px;
+    background-color: #1d8aff;
+    font-size: 14px;
+    font-family: HelveticaLight;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    width: auto;
+    border-color: #1d8aff;
+    padding: 2px 4px
+}
+
+.modal .modal-content .modal-body .history a.btn {
+    background-color: #2bab40;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 17px 70px;
+    border-radius: 0;
+    margin-bottom: 20px
+}
+
+.modal .modal-content .modal-body .history table {
+    width: 100%;
+    margin-bottom: 14px
+}
+
+.modal .modal-content .modal-body .history table thead th {
+    background: 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.25;
+    text-align: center;
+    padding: 5px
+}
+
+.modal .modal-content .modal-body .history table tbody tr {
+    background: #252f53
+}
+
+.modal .modal-content .modal-body .history table tbody tr:nth-child(2n) {
+    background: 0 0
+}
+
+.modal .modal-content .modal-body .history table tbody tr td {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: center;
+    padding: 5px
+}
+
+.modal .modal-content .modal-body .rules {
+    padding: 15px
+}
+
+.modal .modal-content .modal-body .rules button.close {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    text-shadow: none;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    padding: 5px;
+    opacity: 1
+}
+
+.modal .modal-content .modal-body .rules span.title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    background: #4d5d91;
+    display: block;
+    padding: 20px 5px;
+    margin-bottom: 15px;
+    //margin: -15px -15px 15px
+}
+
+.modal .modal-content .modal-body .rules p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: left;
+    display: block
+}
+
+.modal .modal-content .modal-body .autoplay button.close {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    text-shadow: none;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    padding: 5px;
+    opacity: 1
+}
+
+.modal .modal-content .modal-body .autoplay span.title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    background: #4d5d91;
+    display: block;
+    padding: 20px 5px;
+    margin-bottom: 15px
+}
+
+.modal .modal-content .modal-body .autoplay p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: center;
+    display: block
+}
+
+.modal .modal-content .modal-body .autoplay .buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 330px;
+    margin: 0 auto 38px
+}
+
+.modal .modal-content .modal-body .autoplay .buttons button {
+    background-color: #2bab40;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 10px 13px;
+    width: 140px;
+    border-radius: 0;
+    border: 1px solid #2bab40;
+    cursor: pointer;
+    width: -webkit-calc(50% - 10px);
+    width: calc(50% - 10px);
+    margin-left: 10px
+}
+
+.modal .modal-content .modal-body .autoplay .buttons button.cancel {
+    color: #fff;
+    background: 0 0;
+    border-width: 1px;
+    border-color: #4d5d91;
+    border-style: solid;
+    margin-right: 10px;
+    margin-left: 0
+}
+
+.modal .modal-content .modal-body .autoplay .range {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 330px;
+    margin: 0 auto 28px;
+    padding-left: 16px
+}
+
+.modal .modal-content .modal-body .autoplay .range .value {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.8;
+    background: #252f53;
+    display: inline-block;
+    text-align: center;
+    width: 36px
+}
+
+.modal .modal-content .modal-body .autoplay .range .ui-slider {
+    width: -webkit-calc(100% - 70px);
+    width: calc(100% - 70px);
+    height: 7px;
+    position: relative;
+    border-radius: 1px;
+    border: none;
+    background-color: #6d87f4
+}
+
+.modal .modal-content .modal-body .autoplay .range .ui-slider .ui-slider-handle {
+    width: 15px;
+    height: 15px;
+    background: 0 0;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    top: -4px;
+    margin-left: -4px
+}
+
+.modal .modal-content .modal-body .autoplay .range .ui-slider .ui-slider-handle:active,
+.modal .modal-content .modal-body .autoplay .range .ui-slider .ui-slider-handle:focus,
+.modal .modal-content .modal-body .autoplay .range .ui-slider .ui-slider-handle:hover {
+    outline: 0
+}
+
+.modal .modal-content .modal-body .autoplay .range .ui-slider:before {
+    content: '0';
+    font-size: 14px;
+    color: #4d5d91;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    left: -16px;
+    top: -3px
+}
+
+.modal .modal-content .modal-body .autoplay .range .ui-slider:after {
+    content: '∞';
+    font-size: 22px;
+    color: #4d5d91;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    right: -26px;
+    top: -6px
+}
+
+.modal .modal-content .modal-body .login button.close {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    text-shadow: none;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    padding: 5px;
+    opacity: 1
+}
+
+.modal .modal-content .modal-body .login .nav-tabs,
+.modal .modal-content .modal-body .login .top {
+    border-bottom: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 0
+}
+
+.modal .modal-content .modal-body .login .nav-tabs a,
+.modal .modal-content .modal-body .login .top a {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 0;
+    border: none;
+    background: #202a4d
+}
+
+.modal .modal-content .modal-body .login .nav-tabs a.active,
+.modal .modal-content .modal-body .login .top a.active {
+    background: #4d5d91
+}
+
+.modal .modal-content .modal-body .login .nav-tabs a:active,
+.modal .modal-content .modal-body .login .nav-tabs a:focus,
+.modal .modal-content .modal-body .login .nav-tabs a:hover,
+.modal .modal-content .modal-body .login .top a:active,
+.modal .modal-content .modal-body .login .top a:focus,
+.modal .modal-content .modal-body .login .top a:hover {
+    text-decoration: none
+}
+
+.modal .modal-content .modal-body .login .links-outside {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.modal .modal-content .modal-body .login .links-outside a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    line-height: 1.375;
+    text-align: left;
+    display: inline-block
+}
+
+.modal .modal-content .modal-body .login .links-outside span {
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.602;
+    text-align: right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.modal .modal-content .modal-body .login .links-outside span span {
+    display: inline-block;
+    margin-left: 6px;
+    position: relative;
+    line-height: 1;
+    top: -4px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step {
+    text-align: center
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step.step3 {
+    padding: 20px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .wait .loader {
+    -webkit-animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite;
+    margin-top: 10px;
+    margin-bottom: 14px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .wait p {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .wait p a {
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .wait p.small {
+    font-size: 14px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount span.balance {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 54px;
+    min-height: 44px;
+    background: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/img/coins_green.png) no-repeat left center;
+    margin: 5px 0
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form {
+    border-top: 1px solid #4d5d91;
+    padding: 22px 20px 32px;
+    text-align: center
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form span.label {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.125;
+    text-align: left;
+    display: block;
+    margin-bottom: 6px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form .row {
+    //margin-left: -10px;
+    //margin-right: -10px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form .row>div {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form .form-group {
+    position: relative;
+    margin-bottom: 14px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form .form-group button {
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    right: 1px;
+    top: 1px;
+    height: 34px;
+    width: 34px;
+    background: 0 0;
+    border: none;
+    padding: 0
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input {
+    border: none;
+    background-color: #252f53;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.375;
+    text-align: left;
+    width: 100%;
+    padding: 7px 12px 5px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input::-moz-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input:-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input::-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input::placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .form button {
+    background-color: #2bab40;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 50px 13px;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    display: inline-block
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .left {
+    width: 50%
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .amount .right {
+    width: 50%;
+    border-left: 1px solid #4d5d91;
+    padding: 10px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: left;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step span.title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins {
+    display: block;
+    border-top: 1px solid #acacac;
+    padding: 12px 36px 22px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins.no-border {
+    border: none
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li {
+    width: 14.28%;
+    margin-bottom: 8px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li.active span {
+    font-weight: 700
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li span {
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li .logo {
+    height: 60px
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li .logo img {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li a:active,
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li a:focus,
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li a:hover {
+    text-decoration: none
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li a:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li a:hover .logo img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .withdraw-steps .step .select-coins button {
+    background-color: #2bab40;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    padding: 15px 75px 13px;
+    border-radius: 0;
+    border: none;
+    margin: 6px auto 14px;
+    cursor: pointer
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step {
+    text-align: center
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step.step2 {
+    padding: 30px 20px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step.step3 {
+    padding: 26px 20px 36px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step.step4 {
+    padding: 20px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .wait .loader {
+    -webkit-animation: rotate 1.5s linear infinite;
+    animation: rotate 1.5s linear infinite;
+    margin-top: 12px;
+    margin-bottom: 14px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .wait p {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .wait p a {
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .wait p.small {
+    font-size: 14px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit .row {
+    //margin-left: -10px;
+    //margin-right: -10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit .row>div {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit .form-group {
+    position: relative
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit .form-group button {
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    right: 1px;
+    top: 1px;
+    height: 34px;
+    width: 34px;
+    background: 0 0;
+    border: none;
+    padding: 0
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input {
+    border: none;
+    background-color: #252f53;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.375;
+    text-align: left;
+    width: 100%;
+    padding: 7px 12px 6px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input::-moz-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input:-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input::-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit input::placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .deposit button {
+    background-color: #2bab40;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 40px 13px;
+    border-radius: 0;
+    border: 1px solid #2bab40;
+    cursor: pointer;
+    display: block;
+    width: 100%
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: left;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .amount {
+    width: 480px;
+    margin: 0 auto;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .amount .input {
+    max-width: 360px;
+    margin: 0 auto 13px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step span {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.375;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .buttons button {
+    background-color: #2bab40;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px 13px;
+    border-radius: 0;
+    border: 1px solid #2bab40;
+    cursor: pointer;
+    width: -webkit-calc(50% - 10px);
+    width: calc(50% - 10px);
+    margin-left: 10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .buttons button.back {
+    color: #fff;
+    background: 0 0;
+    border-width: 1px;
+    border-color: #4d5d91;
+    border-style: solid;
+    margin-right: 10px;
+    margin-left: 0
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input i {
+    font-size: 15px;
+    font-style: normal;
+    color: #fff;
+    line-height: 1.375;
+    text-align: left;
+    position: absolute;
+    left: 16px;
+    top: 8px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input {
+    background-color: #252f53;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.375;
+    text-align: right;
+    width: 100%;
+    padding: 7px 12px 5px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input::-moz-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input:-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input::-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .input input::placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step span.balance {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 54px;
+    min-height: 44px;
+    background: url(http://localhost/crbcb_binary_client/bitcoinbet/bitcoinbet/img/coins_green.png) no-repeat left center;
+    margin: 5px 0
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step span.title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins {
+    display: block;
+    border-top: 1px solid #4d5d91;
+    padding: 14px 36px 22px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins.no-border {
+    border: none
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: 0 auto
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li {
+    width: 14.28%;
+    margin-bottom: 8px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li.active span {
+    font-weight: 700
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li span {
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li .logo {
+    height: 60px
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li .logo img {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li a:active,
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li a:focus,
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li a:hover {
+    text-decoration: none
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li a:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li a:hover .logo img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+
+.modal .modal-content .modal-body .login .deposit-steps .step .select-coins button {
+    background-color: #2bab40;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 75px 13px;
+    border-radius: 0;
+    margin-top: 6px;
+    cursor: pointer
+}
+
+.modal .modal-content .modal-body .login .bottom {
+    padding: 24px 20px 20px
+}
+
+.modal .modal-content .modal-body .login .bottom .custom-control {
+    margin-bottom: 12px
+}
+
+.modal .modal-content .modal-body .login .bottom .custom-control label {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.571;
+    text-align: left
+}
+
+.modal .modal-content .modal-body .login .bottom .custom-control label:before {
+    border-width: 1px;
+    border-color: #0a102b;
+    border-style: solid;
+    border-radius: 0;
+    background: #ebebeb
+}
+
+.modal .modal-content .modal-body .login .bottom .custom-control label a {
+    color: #0072bc;
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .bottom .custom-control label a:active,
+.modal .modal-content .modal-body .login .bottom .custom-control label a:focus,
+.modal .modal-content .modal-body .login .bottom .custom-control label a:hover {
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .bottom h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    background: #4d5d91;
+    display: block;
+    padding: 20px 5px;
+    margin-bottom: 15px;
+    margin: -24px -20px 15px;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .bottom p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.25;
+    text-align: left;
+    display: block;
+    margin-bottom: 16px
+}
+
+.modal .modal-content .modal-body .login .bottom p a {
+    color: #0072bc;
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .bottom p a:active,
+.modal .modal-content .modal-body .login .bottom p a:focus,
+.modal .modal-content .modal-body .login .bottom p a:hover {
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .bottom .form-group {
+    position: relative;
+    margin-bottom: 15px
+}
+
+.modal .modal-content .modal-body .login .bottom .form-group i {
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+    left: 12px;
+    top: 9px
+}
+
+.modal .modal-content .modal-body .login .bottom .form-group .showPass {
+    right: 12px;
+    left: inherit;
+    cursor: pointer
+}
+
+.modal .modal-content .modal-body .login .bottom input {
+    border: none;
+    background-color: #252f53;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.375;
+    text-align: left;
+    width: 100%;
+    padding: 7px 35px 5px
+}
+
+.modal .modal-content .modal-body .login .bottom input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .bottom input::-moz-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .bottom input:-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .bottom input::-ms-input-placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .bottom input::placeholder {
+    color: #fff
+}
+
+.modal .modal-content .modal-body .login .bottom button {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 56px;
+    text-align: center;
+    background-color: #2bab40;
+    border: none;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 12px
+}
+
+.modal .modal-content .modal-body .login .bottom button.mb0 {
+    margin-bottom: 0
+}
+
+.modal .modal-content .modal-body .login .bottom span.info {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.571;
+    text-align: center;
+    display: block
+}
+
+.modal .modal-content .modal-body .login .bottom span.info a {
+    color: #0072bc;
+    text-decoration: underline
+}
+
+.modal .modal-content .modal-body .login .bottom span.info a:active,
+.modal .modal-content .modal-body .login .bottom span.info a:focus,
+.modal .modal-content .modal-body .login .bottom span.info a:hover {
+    text-decoration: underline
+}
+

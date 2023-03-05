@@ -1,0 +1,186 @@
+{
+  "id": "ca065200-a505-4ee7-8151-4430e2c14298",
+  "version": "2.0",
+  "name": "BTCOPTIONS",
+  "url": "http://192.168.99.102:3000/btcoptions/?client_id=1&token=980e5e06-1976-11eb-adc1-0242ac120002&idgame=1&lang=EN&currency=USD&homeurl=cryptobet.com",
+  "tests": [{
+    "id": "44f2944e-c0bc-4f2f-a218-cf50cd3076bd",
+    "name": "Create plays",
+    "commands": [{
+      "id": "c34bab7a-56c8-4ed5-8e6b-fcef6a1c560d",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.99.102:3000/btcoptions/?client_id=1&token=980e5e06-1976-11eb-adc1-0242ac120002&idgame=1&lang=EN&currency=USD&homeurl=cryptobet.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e0e5a34-1d6a-48d0-8a48-b70b60f42d84",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1360x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43a6d5cb-4357-46a2-9122-0cf215ea3dac",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .higher_button",
+      "targets": [
+        ["css=div:nth-child(1) > .higher_button", "css:finder"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/button", "xpath:position"]
+      ],
+      "value": "15000"
+    }, {
+      "id": "a0964b94-4418-429a-ab48-f8ff9a5dc783",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6746b871-33bd-42df-9836-b658c976c72e",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b22fe62-16fd-4b68-aed1-b67d6f949947",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64b68b8f-a2a5-4d9f-b034-2d8a2f00f486",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9428fe4-5ed5-4b9c-8181-0a97497a523c",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed83e618-be9a-4840-9562-56c6370bcf82",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c3b672-29dc-4a21-8a7f-027a7e0ef6dd",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "711d9096-c2f9-4867-9d60-91c08e24aea4",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc888ca7-008a-4bec-980f-26dbd635292b",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81d68ddd-3c1c-4860-b80f-714119e210e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb0366f9-a673-491b-814b-f481f76a3b7b",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0307c8b-22d2-4e99-a89c-72de916210e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3df160e0-2baa-4619-9f24-96647c21b581",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3593b51a-a824-41dc-9d93-acf188e3e889",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .invest_button",
+      "targets": [
+        ["css=div:nth-child(3) > .invest_button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='desktop-layout']/div[6]/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a23fd9b0-6038-4310-a5e4-cbfc4cdca0d2",
+      "comment": "",
+      "command": "pause",
+      "target": "12000",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ed17441-263a-4111-9d97-7e1b703256f4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["44f2944e-c0bc-4f2f-a218-cf50cd3076bd"]
+  }],
+  "urls": ["http://192.168.99.100:3000/btcoptions/?client_id=1&token=980e5e06-1976-11eb-adc1-0242ac120002&idgame=1&lang=ES&currency=USD&homeurl=cryptobet.com"],
+  "plugins": []
+}

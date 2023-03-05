@@ -1,0 +1,13 @@
+{
+"type" : "object",
+ "properties" : {
+"token" : {"type" : "string"},
+"action" : {"type" : "string"},
+"amount" : {"type" : "string"},
+"id_bet" : {"type" : "string"},
+"timestamp" : {"type" : "number"},
+"round_id" : {"type" : "number"},
+"details" : {"type" : "string"},
+"hash" : {"type" : "string"}},
+"required":["token","action", "amount","id_bet", "timestamp", "round_id", "details", "hash"]
+}

@@ -1,0 +1,9 @@
+{
+"type" : "object",
+ "properties" : {
+"token" : {"type" : "string"},
+"game_id" : {"type" : "string"},
+"provider_id" : {"type" : "string"},
+"hash" : {"type" : "string"}},
+"required":["token", "game_id","provider_id", "hash"]
+}

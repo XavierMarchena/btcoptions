@@ -1,0 +1,17 @@
+FROM mongo:4.0
+#FROM alpine:edge
+
+#RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/main' >> /etc/apk/repositories
+#RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.6/community' >> /etc/apk/repositories
+#RUN apk update
+#RUN apk add mongodb=3.4.4-r0
+#RUN apk add --no-cache mongodb
+
+RUN mkdir -p /data/db
+EXPOSE 27017
+
+COPY mongo-init.js /docker-entrypoint-initdb.d/mongo-init.js
+#ENTRYPOINT [ "/root/mongo_entry.sh" ]
+CMD [ "mongod", "--auth", "--bind_ip", "0.0.0.0" ]
+
+

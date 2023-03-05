@@ -1,0 +1,9 @@
+{
+"type" : "object",
+ "properties" : {
+"DeveloperId" : {"type" : "string"},
+"token" : {"type" : "string"},
+"timestamp" : {"type" : "number"},
+"Hash" : {"type" : "string"}},
+"required":["DeveloperId","token","timestamp", "Hash"]
+}

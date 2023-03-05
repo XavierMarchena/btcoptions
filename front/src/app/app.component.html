@@ -1,0 +1,646 @@
+<header>
+  <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-expand-lg" aria-expanded="false" style="    background: #121528;
+    float: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    border:none;
+">
+
+            <div class="col-xs-6 col-md-2" style="padding: 0px;text-align: left;">
+
+        <img src="./assets/logo.svg" alt="CryptoBet" width="144" class="d-none d-lg-block">
+        <img src="./assets/logo.svg" alt="CryptoBet"  class="d-lg-none">
+
+      </div>
+
+
+  <div class="container-wrapper">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" style="margin-leftpx">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse no-transition" [attr.aria-expanded]="!isCollapsed" [ngClass]="{collapse: !isCollapsed}">
+
+      <ul class="navbar-nav ml-auto d-none d-lg-flex">
+          <li class="nav-item">
+            <a class="nav-link" (click)="changeSound()">
+              <img width="37" src="./assets/sound.svg" *ngIf="!sound" alt="" class="icon off">
+              <img width="37" src="./assets/sound.svg" alt="" *ngIf="sound" class="icon on">
+              <span *ngIf="!sound">{{ 'desktop.soundOff' | translate }}</span>
+              <span *ngIf="sound">{{ 'desktop.soundOn' | translate }}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a (click)="changeAutoplay()" class="nav-link" data-toggle="modal" data-target="#modalAutoplay" data-dismiss="modal">
+              <img width="37" src="./assets/autoplay.svg" *ngIf="!autoplay" alt="" class="icon off">
+              <img width="37" src="./assets/autoplay.svg" alt="" *ngIf="autoplay" class="icon on">
+
+              <span  *ngIf="!autoplay" class="autoplaySpan">{{ 'desktop.autoplayOff' | translate }}</span>
+              <span  *ngIf="autoplay" class="autoplaySpan">{{ 'desktop.autoplayOn' | translate }}</span>
+            </a>
+          </li>
+          <li class="nav-item" (click)="frameRules.show()">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalRules" data-dismiss="modal"><img width="40" src="./assets/rules.svg" alt="" class="icon">{{ 'desktop.rules' | translate }}</a>
+          </li>
+          <li class="nav-item" (click)="frameBetHistory.show()">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalHistory" data-dismiss="modal"><img width="35" src="./assets/bethistory.svg" alt="" class="icon">{{ 'desktop.betHistory' | translate }}</a>
+          </li>
+
+        </ul>
+
+
+<!--      Mobile-->
+        <ul class="navbar-nav ml-auto d-lg-none">
+          <li class="nav-item">
+            <a class="nav-link" (click)="changeSound()">
+              <img width="37" src="./assets/sound.svg" *ngIf="!sound" alt="" class="icon off">
+              <img width="37" src="./assets/sound.svg" alt="" *ngIf="sound" class="icon on">
+              <span *ngIf="!sound">{{ 'mobile.soundOff' | translate }}</span>
+              <span *ngIf="sound">{{ 'mobile.soundOn' | translate }}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a (click)="changeAutoplay()" class="nav-link" data-toggle="modal" data-target="#modalAutoplay" data-dismiss="modal">
+              <img width="37" src="./assets/autoplay.svg" *ngIf="!autoplay" alt="" class="icon off">
+              <img width="37" src="./assets/autoplay.svg" alt="" *ngIf="autoplay" class="icon on">
+
+              <span  *ngIf="!autoplay" class="autoplaySpan">{{ 'mobile.autoplayOff' | translate }}</span>
+              <span  *ngIf="autoplay" class="autoplaySpan">{{ 'mobile.autoplayOn' | translate }}</span>
+            </a>
+          </li>
+          <li class="nav-item" (click)="frameRules.show()">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalRules" data-dismiss="modal"><img width="40" src="./assets/rules.svg" alt="" class="icon">{{ 'mobile.rules' | translate }}</a>
+          </li>
+          <li class="nav-item" (click)="frameBetHistory.show()">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalHistory" data-dismiss="modal"><img width="35" src="./assets/bethistory.svg" alt="" class="icon">{{ 'mobile.betHistory' | translate }}</a>
+          </li>
+
+        </ul>
+
+
+
+    </div>
+
+  </div>
+</nav>
+
+  </div>
+</header>
+
+
+          <!-- Desktop Layout  -->
+<div id="desktop-layout" class="content" style="height: calc(100vh - 60px);">
+  <div class=" div-content" style="height: calc(100% - 50px);overflow: auto; padding-left: 5px; padding-right:5px; ">
+    <div class="right container" style="padding-right: 6px; padding-left: 6px;">
+      <!-- Desktop graph -->
+
+      <div  class="graph desktop  d-md-block" style="padding-top: 25px;">
+
+<div class="row" style="margin-bottom: 10px;  margin-left: 0px; margin-right: 0px;">
+            <div id="container" class="col-xs" style="flex-wrap: nowrap; width:80%; margin-left: 0px; margin-right: 0px; background-color: #181C32;">
+
+<!--              <div [style.display]="counter>0" id="modules" class="">-->
+              <div id="modules" class="" style="width: 100%;">
+              <img src="./assets/up_down.svg" style="height: 15px; margin-top: 10px;">
+                    <div *ngFor="let result of resultBtcValueMap | keyvalue: asIsOrder;" [@EnterLeave]="'flyIn'">
+
+                    <span class="resultBtcValueSpan {{result.value.cssclass}}" >{{result.value.result}}</span>
+                  </div>
+
+                </div>
+
+
+            </div>
+
+
+              <div class="col-lg" style="">
+                <div class="row" style="    justify-content: center;    background-color: #121528; height: 50px; padding-left: 15px; padding-right: 15px;">
+                  <img src="./assets/counter.svg" style="">
+                <div class="col-xs" style="width:53px; float:right; padding-top: 18px; padding-left: 15px; padding-right: 15px;">
+                  <span class="title" style="">{{ 'desktop.counter' | translate }}</span>
+
+                </div>
+
+                <div id="counter" class="col-xs" style="padding-top: 10px; padding-left:35px; padding-right: 15px;">
+                  <span class="counter_span" style="float:right;">{{counter}} s</span>
+
+                </div>
+
+              </div>
+              </div>
+
+ </div>
+        <div class="block">
+          <div class="left-inner col-md-9 col-lg-9" style="    padding-top: 10px;    background: #181C32;">
+
+
+
+            <div style="display: block; width:900px;    background-color: #161c31;">
+              <canvas style="width:900px;"mdbChart  [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions" [legend]="false" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+              </canvas>
+            </div>
+
+
+                        <div class="top" style="float: left;">
+              <nav>
+                <p><a class="range_link" (click)="getRange(-1)">{{ 'desktop.play' | translate }}</a></p>
+                <p><a  class="range_link" (click)="getRange(0)">{{ 'desktop.min5' | translate }}</a></p>
+                <p><a  class="range_link" (click)="getRange(1)">{{ 'desktop.min30' | translate }}</a></p>
+                <p><a  class="range_link" (click)="getRange(2)">{{ 'desktop.hora1' | translate }}</a></p>
+              </nav>
+
+            </div>
+          </div>
+
+
+          <!-- Desktop Layout  -->
+            <div class="right-inner" style="background: #181C32; text-align: -webkit-center; padding-left: 4%;">
+              <app-alert></app-alert>
+
+              <div class="amount row" style="padding-left: 10%; padding-right: 10%; margin-bottom: 2px; padding-bottom:2px;     margin:auto;">
+
+                <div class="row " style="display:block; padding-left:25%;">
+                  <div class="row ">
+                  <span class="balance_text" style=" ">Balance</span>
+                    </div>
+                  <div class="row ">
+                  <span class="col-xs balance_span" style="">{{balance}}</span>
+
+                  <img class="col-xs" src="./assets/{{currency}}.svg" style="width:12px; height:12px; margin:5px;"/>
+                     </div>
+                </div>
+
+
+                <!-- <div class="col">
+
+                  <span class="balance_span" style="">{{balance}}</span>
+                </div> -->
+
+
+              </div>
+
+              <div class="row" style="background: #22264A; width: 70%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%; margin: auto; margin-bottom: 2%;">
+              <div class="row" style="padding: 8px;">
+
+
+
+
+                                                <div class="col-xs" style="display:flex;">
+                                                  <span class="title">{{ 'desktop.btcBetValue' | translate }}</span>
+                                                  <img src="./assets/USD.svg" style="width:12px; height:12px;"/>
+
+                                                </div>
+                <div class="col-xs col-xs-input">
+                    <input class="btc_value_input" [(ngModel)]="btcBetValue" type="text" placeholder="0.00" style="" readonly>
+                </div>
+
+
+            </div>
+                                        <div class="row" style="padding: 8px;">
+
+                      <div class="col-xs">
+                                              <span class="title" style="display: inline;">{{ 'desktop.profitOnWin' | translate }} {{currency}}</span>
+                        <img src="./assets/{{currency}}.svg" style="width:12px; height:12px;"/>
+
+                      </div>
+
+                <div class="col-xs col-xs-input">
+                  <input class="profit_on_win_input" type="number" name="input"  [(ngModel)]="profitOnWin" required style="" readonly/>
+                </div>
+
+            </div>
+
+              <div class="col-lg" style="padding: 8px; margin:0; display: inline-block; ">
+
+                      <div class="row" style="margin: 0;">
+                                              <span class="title" style="display: inline;">{{ 'desktop.betAmount' | translate }} {{currency}}</span>
+                        <img src="./assets/{{currency}}.svg" style="width:12px; height:12px;"/>
+
+                      </div>
+<div class="row" style="margin:0; width: 100%;">
+
+  <div class="row" style="margin:0; width: 100%;">
+                <div class="number-input" style="margin:0; width: 100%;">
+
+                                        <div class="row" style="margin:0;">
+    <input class="bet_amount_input" type="number"  (ngModelChange)="modelChanged($event)" name="input" [(ngModel)]="betAmount" step="{{betStep}}" min="{{betMin}}" max="{{betMax}}" required style="" onKeyDown="return false"/>
+  </div>
+
+                  <div class="row" style="margin:0;     margin-top: 5%; justify-content: center;">
+                   <button [disabled]="autoplay==true || loading ==true" class="plusminus" (click)="handleMinus()" [ngStyle]="{'opacity': autoplay==true || loading ==true  ? '0.4'  : '1' }">-</button>
+
+                   <button [disabled]="autoplay==true || loading ==true" class="plusminus" (click)="handlePlus(1)" [ngStyle]="{'opacity': autoplay==true || loading ==true  ? '0.4'  : '1' }">+</button>
+<!--                  <input class="bet_amount_input" type="number"  (ngModelChange)="modelChanged($event)" (change)="modelChangedAfter($event)" name="input" [ngModel]="currency=='USD' ? (betAmount | number:'1.3-6' ) : (betAmount / btcValue | number:'1.8-8' ) " step="{{currency == 'USD' ? betStep : (betStep/btcValue | number:'1.8-8')}}" min="{{currency == 'USD' ? betMin : (betMin/btcValue| number:'1.8-8') }}" max="{{currency == 'USD' ? betMax : (betMax/btcValue | number:'1.8-8') }}" required style="" onKeyDown="return false"/>-->
+                </div>
+                </div>
+    </div>
+  </div>
+
+            </div>
+</div>
+
+
+
+              <div>
+                            <div class="bets row" style="flex-wrap: nowrap;">
+                              <div class="col-xs" style="margin: 0 auto;">
+
+
+                              <div class="">
+
+                                  <button [disabled]=" autoplay==true || loading==true" style="" [ngStyle]="{'opacity': betType != 'higher'  ? '1'  : '1' }" [ngClass]="{'higher_button_on': betType == 'higher' && lang=='EN', 'higher_button_off': betType != 'higher' && lang=='EN',  'sube_button_on': betType == 'higher' && lang=='ES', 'sube_button_off': betType != 'higher' && lang=='ES'}"  (click)="type('higher')">
+                                  </button>
+                              </div>
+
+                              <div class="">
+                                  <button [disabled]="autoplay==true || loading==true" style="" [ngStyle]="{'opacity': betType != 'lower' ? '1'  : '1' }" [ngClass]="{'lower_button_on': betType == 'lower' && lang=='EN', 'lower_button_off': betType != 'lower' && lang=='EN',  'baja_button_on': betType == 'lower' && lang=='ES', 'baja_button_off': betType != 'lower' && lang=='ES'}" (click)="type('lower')">
+                                                <!-- <img src="/assets/lower.svg" alt="" style="width: 100%; margin: 0px;"> -->
+                                  </button>
+
+                              </div>
+
+                              <div class="">
+                                <button type="button" [disabled]="betType == -1 || loading==true " style=""  style="" [ngStyle]="{'opacity': betType == -1 || loading==true  ? '0.4'  : '1' }" [ngClass]="[lang=='EN'?'invest_button':'invertir_button']" (click)="bet()">
+                                   <div [class.spinner]="loading" [class.spinner-1]="loading"></div>
+                                  <!-- <img src="/assets/invest.svg" alt="" style="width: 100%; margin: 0px;"> -->
+                                </button>
+                              </div>
+                              </div>
+
+
+              </div>
+              </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+ </div>
+     </div>
+   </div>
+
+
+
+
+
+
+
+
+<!--Mobile Layout-->
+<div id="mobile-layout"  class="content" style="">
+  <div class=" div-content" style="height: calc(100% - 50px);overflow: auto; padding-left: 5%; background-color: #1B1E3E; ">
+
+
+
+
+    <div class="block">
+
+              <div class="left-inner col-md-9 col-lg-9" style="    background: #181C32;">
+                <div class="top" style="float: left; width:100%;">
+              <nav style="display: flex;">
+                <p><a class="range_link" (click)="getRange(-1)">{{ 'mobile.play' | translate }}</a></p>
+                <p><a  class="range_link" (click)="getRange(0)">{{ 'mobile.min5' | translate }}</a></p>
+                <p><a  class="range_link" (click)="getRange(1)">{{ 'mobile.min30' | translate }}</a></p>
+<!--                <p><a  class="range_link" (click)="getRange(2)">1 hour</a></p>-->
+              </nav>
+
+            </div>
+          </div>
+
+
+            <div style="display: block;     background-color: #161c31; ">
+              <canvas mdbChart height="400" [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions" [legend]="false" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+              </canvas>
+            </div>
+
+
+
+    </div>
+
+      <!-- Mobile Layout  -->
+    <div class="row">
+                  <div class="row" style="display:inline; width:50%; margin:0px; padding-left:10px;">
+                  <span class="balance_text row" style=" ">{{ 'mobile.balance' | translate }}</span>
+                                                  <span class="balance_span" style="">{{balance}}</span>
+                              <img class="col-xs" src="./assets/{{currency}}.svg" style="width:12px; height:12px; margin:5px;"/>
+                    </div>
+
+
+      <div class="col-xs" style="width:50%; display:inline; padding-left:12px;">
+                <span class="title">{{ 'mobile.counter' | translate }}</span>
+                        <span class="counter_span" style="">{{counter}}</span>
+
+              </div>
+
+</div>
+    <div class="right-inner" style="float:left; height: 141px; background-color: #22264A; width: 45%;">
+        <div class="col-xs bar-background" style="float:left;     max-width: 100%; padding-top:5%">
+            <div class="row" style="display:contents;">
+              <div class="col-xs" style="">
+<!--                <span class="title" style="display: inline-block;">BTC Value</span>-->
+                <span class="title">{{ 'desktop.btcBetValue' | translate }}</span>
+                <img src="./assets/USD.svg" style="width:12px; height:12px; display:inline;"/>
+                <div class="col-xs col-xs-input" style="    padding-left: 5%;
+    padding-right: 5%;">
+                <input class="btc_value_input" [(ngModel)]="btcBetValue" type="text" placeholder="0.00" style="" readonly>
+              </div>
+
+              </div>
+
+
+              <div class="col-xs" style="">
+<!--                <span class="title">Bet amount (BTC)</span>-->
+                                                              <span class="title" style="display: inline;">{{ 'desktop.betAmount' | translate }} {{currency}}</span>
+                        <img src="./assets/{{currency}}.svg" style="width:12px; height:12px; display:inline;"/>
+              <div class="col-xs col-xs-input" style="    padding-left: 5%;
+    padding-right: 5%;">
+              <input class="bet_amount_input" type="number"  (ngModelChange)="modelChanged($event)" name="input" [(ngModel)]="betAmount" step="{{betStep}}" min="{{betMin}}" max="{{betMax}}" required style="" onKeyDown="return false"/>
+              </div>
+
+
+              </div>
+
+
+                                      <div class="col-xs col-xs-input" style="    justify-content: center;">
+                 <div class="row" style="margin:0;     margin-top: 5%; ">
+                   <button class="plusminus" (click)="handleMinus()" style="width: 38px; height: 30px; background-image: url('./assets/minusone.svg'); background-position: center; background-repeat: no-repeat; background-size: cover; background-color: transparent; border:none" ></button>
+                 </div>
+
+
+                 <div class="col-xs col-xs-input" ><button style="width: 38px; height: 30px; background-image: url('./assets/x2.svg'); background-position: center; background-repeat: no-repeat; background-size: cover; background-color: transparent; border:none" class=""  class="" (click)="handlePlus(2)"></button></div>
+
+
+                <div class="col-xs col-xs-input"><button style="width: 38px; height: 30px; background-image: url('./assets/x10.svg'); background-position: center; background-repeat: no-repeat; background-size: cover; background-color: transparent; border: none"  class="" (click)="handlePlus(10)"></button></div>
+               </div>
+
+            </div>
+
+
+
+
+          </div>
+
+</div>
+
+
+            <div class="amount row" style="justify-content:left;">
+
+
+                      <div class="bets col-xs" style="float:right; text-align:center;">
+
+
+
+
+                            <div class="col-xs col-xs-button">
+
+                                <button [disabled]="counter>0" style="" [ngStyle]="{'opacity': betType != 'higher'  ? '1'  : '1' }" [ngClass]="{'higher_button_on': betType == 'higher' && lang=='EN', 'higher_button_off': betType != 'higher' && lang=='EN',  'sube_button_on': betType == 'higher' && lang=='ES', 'sube_button_off': betType != 'higher' && lang=='ES'}" (click)="type('higher')">
+                                </button>
+                            </div>
+
+                            <div class="col-xs col-xs-button">
+                                <button [disabled]="counter>0" style="" [ngStyle]="{'opacity': betType != 'lower' ? '1'  : '1' }" [ngClass]="{'lower_button_on': betType == 'lower' && lang=='EN', 'lower_button_off': betType != 'lower' && lang=='EN',  'baja_button_on': betType == 'lower' && lang=='ES', 'baja_button_off': betType != 'lower' && lang=='ES'}" (click)="type('lower')">
+
+                                </button>
+
+                            </div>
+                                                    <div class="col-xs col-xs-button">
+                              <button type="button" [disabled]="betType == -1 || loading==true" style=""  style="" [ngStyle]="{'opacity': betType == -1 || loading==true  ? '0.4'  : '1' }" [ngClass]="[lang=='EN'?'invest_button':'invertir_button']"  (click)="bet()">
+
+
+                              <div [class.spinner]="loading" [class.spinner-1]="loading"></div>
+                              </button>
+                            </div>
+
+
+                        </div>
+          </div>
+
+
+
+              <div class="col-xs col-xs-input " style="margin-top:18px">
+                 <div class="col-xs col-xs-input bet_amount_left" style="    justify-content: center; align-items: center; width: 63px; height: 31px; background: #EB5757;">{{ 'mobile.bet' | translate }}</div>
+                  <input class="bet_amount_input_right" type="number" name="input"  [(ngModel)]="betAmount"  required style="" readonly/>
+
+                 <div class="col-xs col-xs-input" style=" justify-content: center; align-items: center; width: 63px; height: 31px; background: #27AE60;">{{ 'mobile.win' | translate }}</div>
+                  <input class="win_amount_input_right" type="number" name="input"  [(ngModel)]="win" required style="" readonly/>
+
+
+
+                <div class="col-xs col-xs-input" style=" justify-content: center; align-items: center;  width: 63px; height: 31px; background: #F2994A;">{{ 'mobile.profit' | translate }}</div>
+                  <input class="profit_amount_input_right" type="number" name="input"  [(ngModel)]="profitOnWin" step="0.001" min="0" max="1" required style="" readonly/>
+                </div>
+
+                    <div class="left-inner col-md-9 col-lg-9" style="padding-left:0px;    background: #181C32;">
+                <div class="" style="float: left; width:100%;">
+              <ul style="display: flex; padding-left:0px; padding-top:10%; margin-bottom:0px;">
+                <li style="width:33%;"><a class="range_link" (click)="getBets('all')" [ngClass]="{'betsSelected': betHistory == 'all'}" style="width:100%;">{{ 'mobile.allBets' | translate }}</a></li>
+                <li style="width:33%;"><a  class="range_link" (click)="getBets('my')" [ngClass]="{'betsSelected': betHistory == 'my'}" style="width:100%;">{{ 'mobile.myBets' | translate }}</a></li>
+                <li style="width:33%;"><a  class="range_link" (click)="getBets('high')" [ngClass]="{'betsSelected': betHistory == 'high'}" style="width:100%;">{{ 'mobile.highRollers' | translate }}</a></li>
+
+              </ul>
+
+            </div>
+          </div>
+ <table mdbTable responsive="true" style="color:white;display: inline-table; border:none;" >
+  <thead *ngIf="lang=='EN'" >
+    <tr>
+      <th *ngFor="let head of headElementsEN" scope="col">{{head}} </th>
+
+    </tr>
+
+  </thead>
+     <thead *ngIf="lang=='ES'" >
+    <tr>
+      <th *ngFor="let head of headElementsES" scope="col">{{head}} </th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of bets">
+      <th scope="row">{{el.date}}</th>
+      <td>{{el.win}}</td>
+      <td>{{el.profit}}</td>
+      <td style="color: white" class="input-text"
+        [ngClass]="{ 'price-input-text': 'i == 0' }"
+        [ngStyle]="{color: el.result == 'win' ? '#2BAB40' : el.result=='lose'?'#EB5757':'#E1E1E1'}">{{el.result}}</td>
+      <td>{{el.bet}}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+
+     </div>
+
+
+
+
+
+
+</div>
+
+<!-- Bet History Modal-->
+<div
+  mdbModal
+  #frameBetHistory="mdbModal"
+  class="modal fade top"
+  id="frameModalTop"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+  style="overflow-y: auto">
+  <!--Dialog-->
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">
+          {{ 'desktop.betHistory' | translate }}
+        </h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="frameBetHistory.hide()"
+        >
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+       <table mdbTable responsive="true" style="color:white;display: inline-table; border:none;" >
+  <thead *ngIf="lang=='EN'" >
+    <tr>
+      <th *ngFor="let head of headElementsEN" scope="col">{{head}} </th>
+
+    </tr>
+
+  </thead>
+     <thead *ngIf="lang=='ES'" >
+    <tr>
+      <th *ngFor="let head of headElementsES" scope="col">{{head}} </th>
+
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of bets">
+      <th scope="row">{{el.date}}</th>
+      <td>{{el.win}}</td>
+      <td>{{el.profit}}</td>
+      <td style="color: white" class="input-text"
+        [ngClass]="{ 'price-input-text': 'i == 0' }"
+        [ngStyle]="{color: el.result == 'win' ? '#2BAB40' : el.result=='lose'?'#EB5757':'#E1E1E1'}">{{el.result}}</td>
+      <td>{{el.bet}}</td>
+
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <!--/.Body-->
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+<!--        <button
+          type="button"
+          mdbBtn
+          color="info"
+          class="waves-effect"
+          mdbWavesEffect
+        >
+          Add
+        </button>-->
+      </div>
+      <!--Footer-->
+    </div>
+    <!--/.Content-->
+  </div>
+  <!--/.Dialog-->
+</div>
+<!--/.Modal-->
+
+
+<!-- Rules Modal-->
+<div
+  mdbModal
+  #frameRules="mdbModal"
+  class="modal fade top"
+  id="frameModalTopRules"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+  style="overflow-y: auto">
+  <!--Dialog-->
+  <div class="modal-dialog modal-notify modal-info" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">
+          {{ 'desktop.rules' | translate }}
+        </h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="frameRules.hide()"
+        >
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+
+      </div>
+      <!--/.Body-->
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+<!--        <button
+          type="button"
+          mdbBtn
+          color="info"
+          class="waves-effect"
+          mdbWavesEffect
+        >
+          Add
+        </button>-->
+      </div>
+      <!--Footer-->
+    </div>
+    <!--/.Content-->
+  </div>
+  <!--/.Dialog-->
+</div>
+<!--/.Modal-->

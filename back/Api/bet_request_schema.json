@@ -1,0 +1,16 @@
+{
+"type" : "object",
+ "properties" : {
+"DeveloperId" : {"type" : "string"},
+"token" : {"type" : "string"},
+"UserId" : {"type" : "string"},
+"action" : {"type" : "string"},
+"amount" : {"type" : "number"},
+"amount_bet" : {"type" : "number"},
+"amount_win" : {"type" : "number"},
+"round_id" : {"type" : "number"},
+"details" : {"type" : "string"},
+"timestamp" : {"type" : "number"},
+"Hash" : {"type" : "string"}},
+"required":["DeveloperId","token", "UserId","action", "amount", "amount_bet", "amount_win", "round_id", "details","timestamp", "Hash"]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "required": ["token", "idgame", "lang", "currency", "homeurl"],
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "idgame": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "homeurl": {
+      "type": "string"
+    }
+  }
+}

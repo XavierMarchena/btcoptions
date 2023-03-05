@@ -1,0 +1,11 @@
+{
+"type" : "object",
+ "properties" : {
+  "Hash" : {"type" : "string"}},
+  "balance" : {"type" : "string"},
+  "currency" : {"type" : "string"},
+  "name" : {"type" : "string"},
+  "timestamp" : {"type" : "number"},
+  "userId" : {"type" : "number"},
+"required":["Hash","balance","timestamp", "currency", "name", "userId"]
+}

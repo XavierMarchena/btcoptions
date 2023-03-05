@@ -1,0 +1,15 @@
+configparser
+decorator
+geoip2==2.3.0
+ipaddr==2.1.11
+maxminddb==1.2.0
+celery==4.1.1
+redis
+websocket_client
+pymemcache
+python-socketio==4.6.0
+python-engineio==3.13.2
+eventlet==0.29.1
+mongoengine
+jsonschema
+enum

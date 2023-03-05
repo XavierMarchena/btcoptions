@@ -1,0 +1,7 @@
+{
+"type" : "object",
+ "properties" : {
+"id_bet" : {"type" : "string"},
+"balance" : {"type" : "string"}},
+"required":["id_bet","balance"]
+}

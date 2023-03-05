@@ -1,0 +1,1157 @@
+//==============================MOBILE LAYOUT ============================================================
+@media (max-width:1024px) {
+    header .navbar-collapse {
+        max-width: 210px
+    }
+  .navbar-nav {
+    //position:fixed;
+    top:7%;
+    left: -150px;
+    width:150px;
+    -moz-transition:all 500ms ease-in;
+    -webkit-transition:all 500ms ease-in;
+    -o-transition:all 500ms ease-in;
+    transition:all 500ms ease-in;
+  }
+
+  .collapse .navbar-nav {
+    left: 0;
+  }
+
+    #desktop-layout {
+      display: none !important;
+    }
+    #mobile-layout {
+      display: block !important;
+    }
+
+    .bar-background{
+      //background: #1F2749;
+      border-radius: 3px;
+      height: 90px;
+      margin-bottom: 23px;
+      //margin-top: 23px;
+    }
+
+    .block {
+      background-color: #161C31;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+
+    //mobile design
+    .spanWin {
+      color : #161C31;
+      background-color: #2BAB40;
+    }
+
+    .spanTie {
+      color: #E1E1E1;
+      background-color: #2F3F55;
+    }
+
+    .spanLose {
+      color: #161C31;
+      background-color:#EB5757;
+    }
+  #container {
+    //width:300px;
+    //height: 60px;
+    //overflow: hidden;
+    //width: max-content;
+    overflow-x: scroll;
+    //scrollbar-width: none;
+
+}
+#container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+    #modules {
+    display: flex;
+    //height:90px; /* 40px - more place for scrollbar, is hidden under parent box */
+    padding:5px;
+    white-space:nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin:0px;
+  	//-webkit-overflow-scrolling:touch;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.resultBtcValueSpan {
+    display:inline-block;
+    width:50px;
+    height:50px;
+    //line-height:50px;
+    text-align:center;
+    //background:#ddd;
+}
+.resultBtcValueSpan + .resultBtcValueSpan {
+    margin-left:5px
+}
+
+
+
+
+
+
+
+
+
+    .btc_value_input {
+
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      top: 26px;
+      background-color: #4D5D91;
+      //border: 1px solid #B5BDDC;
+      box-sizing: border-box;
+      box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      //background: #4D5D91;
+      border: none;
+      text-align: center;
+
+    }
+    .resultBtcValueSpan {
+      width: 56.93px;
+      height: 25px;
+      //left: 47px;
+      //top: 131px;
+      //background: #2F3F55;
+      border-radius: 14px;
+      display: block;
+      text-align: center;
+      padding-top: 5px;
+    }
+
+  .bet_amount_input {
+
+      width: 100%;
+      height: 20px;
+      left: 0px;
+      top: 26px;
+      background-color: #4D5D91;
+      //border: 1px solid #B5BDDC;
+      box-sizing: border-box;
+      box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      //background: #4D5D91;
+      border: none;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .counter_span {
+  width: 80px;
+  height: 29px;
+  display:block !important;
+  left: 0px;
+  top: 26px;
+  //background: #4D5D91;
+  //border: 1px solid #B5BDDC;
+  box-sizing: border-box;
+  box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.25);
+  //border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+
+  border: 1px solid #C7C8D7;
+box-sizing: border-box;
+    }
+
+.plusminus {
+  color:white;
+  //height: 100%;
+  //width: 50%;
+  background: white;
+  border: none;
+  font-size: 25px;
+ //width: 51.24px;
+height: 35px;
+
+
+/* Blue 1 */
+
+//background: #2F80ED;
+box-shadow:none !important;
+}
+
+.bet_amount_input_right{
+
+ width: 63px;
+  height: 30px;
+//  left: 0px;
+  //top: 23px;
+
+  /* Buttons */
+  background: #22264A;
+  //background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-align: left;
+  border: none;
+  color:red;
+
+/* Buttons */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 23px;
+display: flex;
+align-items: center;
+
+/* Light */
+
+//color: #C7C8D7;
+text-align:center;
+}
+
+
+bet_amount_left {
+/* Buttons */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 14px;
+display: flex;
+align-items: center;
+text-align: center;
+
+/* White */
+
+color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.win_amount_input_right{
+
+ width: 63px;
+  height: 30px;
+//  left: 0px;
+  //top: 23px;
+
+  /* Buttons */
+  background: #22264A;
+  //background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-align: left;
+  border: none;
+  color: #27AE60;;
+
+/* Buttons */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 23px;
+display: flex;
+align-items: center;
+
+/* Light */
+
+//color: #C7C8D7;
+text-align:center;
+}
+
+.profit_amount_input_right{
+
+ width: 63px;
+  height: 30px;
+//  left: 0px;
+  //top: 23px;
+
+  /* Buttons */
+  background: #22264A;
+  //background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-align: left;
+  border: none;
+  color: #F2994A;
+
+/* Buttons */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 23px;
+display: flex;
+align-items: center;
+
+/* Light */
+
+//color: #C7C8D7;
+text-align:center;
+}
+
+.betsSelected{
+background-color: #4F5C92 !important;
+}
+
+    .col-xs-input {
+      margin-left: 2px;
+      margin-right: 2px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      display: flex;
+      align-items: flex-end;
+      text-align: justify;
+      color: #FFFFFF;
+      width: auto;
+    }
+
+    .col-xs-button {
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+      background-color:transparent;
+    }
+
+
+     .range_link {
+	background-color: #262F4E;
+  display: block;
+  text-align: center;
+	width: 78.79px;
+	height: 28px;
+	box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  color: #C7C8D7 !important;
+     }
+
+     .right .container {
+       padding-left: 6px !important;
+       padding-right: 6px !important;
+     }
+
+    .higher_button_off{
+    padding: 0px;
+    margin: 0px;
+    width: 182px;
+    background-image: url('src/assets/higher_off.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    //border-radius: 3px;
+    height: 47px;
+    background-color: transparent;
+      padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  //background-color: #4CAF50;
+  border: none;
+  //border-radius: 15px;
+  //box-shadow: 0 9px #999;
+  //opacity:0.4;
+  }
+
+    .higher_button_on{
+    padding: 0px;
+    margin: 0px;
+    width: 182px;
+    background-image: url('src/assets/higher_on.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    //border-radius: 3px;
+    height: 47px;
+    background-color: transparent;
+      padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  //background-color: #4CAF50;
+  border: none;
+  //border-radius: 15px;
+  //box-shadow: 0 9px #999;
+  //opacity:0.4;
+  }
+
+  .higher_button_off{
+    padding: 0px;
+    margin: 0px;
+    width: 182px;
+    background-image: url('src/assets/higher_off.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    //border-radius: 3px;
+    height: 47px;
+    background-color: transparent;
+      padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  //background-color: #4CAF50;
+  border: none;
+  //border-radius: 15px;
+  //box-shadow: 0 9px #999;
+  //opacity:0.4;
+  }
+
+  .invest_button {
+    padding: 0px;
+    margin: 0px;
+    //width: 182px;
+    height: 47px;
+    background-image: url('src/assets/invest.svg');
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.15);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    background-color: transparent;
+          padding: 14px 5px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  //background-color: #4CAF50;
+  border: none;
+  //border-radius: 15px;
+  //box-shadow: 0 9px #999;
+  //opacity:0.4;
+  width: 134px;
+   // margin-right: 14%;
+    margin-left: 24px;
+  }
+
+    .invertir_button {
+    padding: 0px;
+    margin: 0px;
+    //width: 182px;
+    height: 47px;
+    background-image: url('src/assets/invertir.svg');
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.15);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    background-color: transparent;
+          padding: 14px 5px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  //background-color: #4CAF50;
+  border: none;
+  //border-radius: 15px;
+  //box-shadow: 0 9px #999;
+  //opacity:0.4;
+  width: 134px;
+   // margin-right: 14%;
+    margin-left: 24px;
+  }
+
+
+
+.balance_span {
+  width: 80px;
+  height: 23px;
+  left: 270.14px;
+  top: 503px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #FFFFFF;
+}
+    .balance_text {
+   font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    /* line-height: 14px; */
+    /* display: flex; */
+    /* align-items: center; */
+    color: #C7C8D7;
+    margin-left:1%;
+  }
+
+
+
+    //mobile design
+
+    .content .graph .top {
+        padding-left: 0;
+
+        top: 8px;
+        left: 0;
+        right: 0;
+        background: transparent;
+    }
+
+    .navbar-brand{
+        padding: 0px !important;
+    }
+    .col-xs-6 {
+    width: 50% !important;
+}
+
+.col-xs img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.settings.col-xs {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-settings {
+background-image: url('src/assets/settings.svg');
+padding: 0px;margin: 0px;
+background-repeat: no-repeat;
+background-position: center;
+width: 53px !important;
+height: 40px;
+background-color: transparent;
+border-radius:50%;
+}
+
+.btn-sound {
+background-image: url('src/assets/sound.svg');
+padding: 0px;margin: 0px;
+background-repeat: no-repeat;
+background-position: center;
+width: 53px !important;
+height: 40px;
+background-color: transparent;
+border-radius:50%;
+}
+
+.btn-auto {
+background-image: url('src/assets/auto.svg');
+padding: 0px;margin: 0px;
+background-repeat: no-repeat;
+background-position: center;
+width: 53px !important;
+height: 40px;
+background-color: transparent;
+border-radius:50%;
+}
+
+.btn-rules {
+background-image: url('src/assets/rules.svg');
+padding: 0px;margin: 0px;
+background-repeat: no-repeat;
+background-position: center;
+width: 53px !important;
+height: 40px;
+background-color: transparent;
+border-radius:50%;
+}
+
+    .content .graph .top nav {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .content .graph .top nav a {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px
+    }
+
+    .content .graph {
+        position: relative
+    }
+
+    .content .graph .block {
+        display: block
+    }
+
+    .content .graph .left-inner {
+        width: 100%;
+        padding: 0px  !important;
+    }
+
+    .content .graph .right-inner {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .content .graph .left-inner img {
+        width: 100%;
+        height: auto;
+        padding: 0px;
+    }
+
+    .content .graph .bets button {
+        font-size: 16px;
+        width: 126px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        //margin-right: 10px;
+        margin-left: 0;
+        margin-bottom: 0
+    }
+
+    .content .graph .bets button.down {
+        margin-left: 10px;
+        margin-right: 0
+    }
+
+    .content .graph .bets button img {
+        width: 17px;
+        margin: 0 5px 0 0
+    }
+
+    .content .graph .bets {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+
+    .content .graph .switch {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .content .graph .switch span.info {
+        color: #fff
+    }
+
+    .onoffswitch {
+        margin-left: 5px
+    }
+
+    .content .graph .right-inner span.title {
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.2;
+        text-align: center;
+        display: block;
+        margin-bottom: 8px
+    }
+
+    .content .graph .right-inner .switch span.title {
+        margin-bottom: 0
+    }
+
+    .content .graph .totals {
+        text-align: center
+    }
+
+    .content .graph .totals span {
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    .content .graph .totals span:last-child {
+        display: block
+    }
+
+    .content .graph .totals {
+        margin-bottom: 14px
+    }
+
+    header .navbar {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    header .navbar-toggler {
+        padding-left: 0
+    }
+
+    .amount-mobile {
+        //display: block;
+        background: #1f2749;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 auto 14px;
+        padding: 4px 6px 4px 12px
+    }
+
+    .amount-mobile .value {
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.8;
+        background: #252f53;
+        display: inline-block;
+        text-align: center;
+        width: 60px
+    }
+
+    .amount-mobile .ui-slider {
+        width: -webkit-calc(100% - 70px);
+        width: calc(100% - 70px);
+        height: 7px;
+        position: relative;
+        border-radius: 1px;
+        border: none;
+        background-color: #6d87f4;
+        background: -webkit-gradient(linear, left top, right top, from(#46579d), color-stop(34%, #2d386b), to(#131938));
+        background: -o-linear-gradient(left, #46579d 0, #2d386b 34%, #131938 100%);
+        background: linear-gradient(90deg, #46579d 0, #2d386b 34%, #131938 100%)
+    }
+
+    .amount-mobile .ui-slider .ui-slider-handle {
+        width: 15px;
+        height: 15px;
+        background: 0 0;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        top: -4px;
+        margin-left: -4px
+    }
+
+    .amount-mobile .ui-slider .ui-slider-handle:active,
+    .amount-mobile .ui-slider .ui-slider-handle:focus,
+    .amount-mobile .ui-slider .ui-slider-handle:hover {
+        outline: 0
+    }
+
+    .modal.show .modal-dialog {
+        margin-top: 70px
+    }
+
+    .modal .modal-content .modal-body .rules img {
+        width: 100%
+    }
+
+    .modal .modal-content .modal-body .autoplay span.title,
+    .modal .modal-content .modal-body .rules span.title {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .history span.title {
+        font-size: 14px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: -25px;
+        margin-right: -25px
+    }
+
+    .modal .modal-content .modal-body .autoplay button.close,
+    .modal .modal-content .modal-body .history button.close,
+    .modal .modal-content .modal-body .rules button.close {
+        font-size: 16px;
+        right: 4px
+    }
+
+    .modal .modal-content .modal-body .history {
+        padding-left: 25px;
+        padding-right: 25px
+    }
+
+    .modal .modal-content .modal-body .history a.btn {
+        font-size: 16px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 19px;
+        padding-bottom: 19px
+    }
+
+    .modal .modal-content .modal-body .history .date-range span a {
+        color: #0072bc
+    }
+
+    .modal .modal-content .modal-body .history span.show {
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 14px
+    }
+
+    .modal .modal-content .modal-body .history span.show .form-control {
+        height: 22px;
+        margin-left: 5px;
+        margin-right: 5px
+    }
+
+    .modal .modal-content .modal-body .history table tbody tr {
+        background: #4d5d91;
+        border-bottom: 8px solid #1e2749
+    }
+
+    .modal .modal-content .modal-body .history table tbody tr:nth-child(2n) {
+        background: #252f53
+    }
+
+    .modal .bets button.close {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1;
+        text-align: center;
+        text-shadow: none;
+        position: absolute;
+        top: 14px;
+        right: 4px;
+        padding: 5px;
+        opacity: 1
+    }
+
+    .modal .bets span.title {
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+        background: #4d5d91;
+        display: block;
+        padding: 20px 5px;
+        margin-bottom: 0
+    }
+
+    .modal .bets .table-bets {
+        background: #181e3d;
+        padding: 32px 10px;
+        text-align: center
+    }
+
+    .modal .bets .table-bets nav {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 16px;
+        background: #1f2749
+    }
+
+    .modal .bets .table-bets nav a {
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.2;
+        padding: 10px;
+        display: inline-block;
+        width: 33.33%
+    }
+
+    .modal .bets .table-bets nav a.active {
+        background: #4d5d91
+    }
+
+    .modal .bets .table-bets nav a:active,
+    .modal .bets .table-bets nav a:focus,
+    .modal .bets .table-bets nav a:hover {
+        text-decoration: none
+    }
+
+    .modal .bets .table-bets table {
+        width: 100%
+    }
+
+    .modal .bets .table-bets table thead th {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 28px
+    }
+
+    .modal .bets .table-bets table tbody td {
+        font-size: 12px;
+        color: #fff;
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 28px
+    }
+
+    .modal .modal-content .modal-body .login .nav-tabs a,
+    .modal .modal-content .modal-body .login .top a {
+        font-size: 14px;
+        padding: 15px 5px
+    }
+
+    .modal .modal-content .modal-body .login button.close {
+        font-size: 16px;
+        right: 5px;
+        top: 9px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step span.balance {
+        font-size: 14px;
+        background-size: 29px;
+        padding-left: 40px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        max-width: 280px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li {
+        width: 25%;
+        margin-bottom: 6px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .select-coins ul.coins li span {
+        margin-bottom: 0
+    }
+
+    .modal .modal-content .modal-body .login .links-outside a {
+        font-size: 12px
+    }
+
+    .modal .modal-content .modal-body .login .links-outside span {
+        font-size: 10px;
+        top: -3px
+    }
+
+    .modal .modal-content .modal-body .login .links-outside span span img {
+        max-width: 80px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .select-coins button {
+        width: 100%
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .select-coins {
+        padding-left: 14px;
+        padding-right: 14px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .buttons {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .amount {
+        width: auto
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .buttons button {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 12px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .buttons button.back {
+        margin-right: 0;
+        margin-bottom: 0;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step span {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step span b {
+        display: block
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step span.title {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step.step2 {
+        padding: 18px 14px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step p {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .deposit .form-group button {
+        height: 33px;
+        background: #252f52
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step .deposit img {
+        margin-bottom: 18px
+    }
+
+    .modal .modal-content .modal-body .login .deposit-steps .step.step3 {
+        padding: 16px 14px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .select-coins {
+        padding: 18px 14px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step span.title {
+        font-size: 14px;
+        font-weight: 500
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .select-coins ul.coins li {
+        width: 25%
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step p {
+        font-size: 12px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step p:last-child {
+        margin-bottom: 0
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .left {
+        width: 100%
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .right {
+        width: 100%;
+        border: none;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 0;
+        padding-bottom: 16px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .form {
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 16px;
+        padding-bottom: 16px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .form span.label {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .form input {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount .form button {
+        font-size: 16px;
+        padding-top: 12px;
+        padding-bottom: 10px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step .amount span.balance {
+        font-size: 14px;
+        font-weight: 500;
+        background-size: 29px;
+        padding-left: 40px
+    }
+
+    .modal .modal-content .modal-body .login .withdraw-steps .step.step3 p {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .autoplay p {
+        font-size: 14px;
+        margin-bottom: 6px
+    }
+
+    .modal .modal-content .modal-body .login .bottom input {
+        font-size: 14px;
+        padding-left: 32px
+    }
+
+    .modal .modal-content .modal-body .login .bottom .form-group i {
+        font-size: 14px
+    }
+
+    .modal .modal-content .modal-body .login .bottom .custom-control label {
+        font-size: 12px
+    }
+
+    .modal .modal-content .modal-body .login .bottom button {
+        font-size: 16px;
+        line-height: 36px
+    }
+
+    .modal .modal-content .modal-body .login .bottom {
+        padding: 30px 16px
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": ["profit_on_win", "bet_amount", "extras", "token", "homeurl", "round_id", "currency", "idgame"],
+  "properties": {
+    "profit_on_win": {
+      "type": "string"
+    },
+    "bet_amount": {
+      "type": "number"
+    },
+    "extras": {
+      "type": "object",
+      "required": ["type", "superbet", "btc_price"],
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "superbet": {
+          "type": "number"
+        },
+        "btc_price": {
+          "type": "number"
+        }
+      }
+    },
+    "token": {
+      "type": "string"
+    },
+    "homeurl": {
+      "type": "string"
+    },
+    "round_id": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "idgame": {
+      "type": "string"
+    }
+  }
+}
